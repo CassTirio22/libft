@@ -22,7 +22,6 @@ static void	ft_free_all(t_list **lst)
 		free(*lst);
 		*lst = tmp->next;
 	}
-	free(lst);
 }
 
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
@@ -30,7 +29,7 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*lst_2;
 	t_list	*tmp;
 
-	if (!(lst_2 = ft_lstnew(0)) || !f)
+	if (!f || !(lst_2 = ft_lstnew(0)))
 		return (0);
 	while (lst)
 	{
