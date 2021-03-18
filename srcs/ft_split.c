@@ -6,15 +6,15 @@
 /*   By: ctirions <ctirions@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 15:04:19 by ctirions          #+#    #+#             */
-/*   Updated: 2021/03/18 14:55:38 by ctirions         ###   ########.fr       */
+/*   Updated: 2021/03/18 22:05:24 by ctirions         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-static void		ft_free_all(char **dst, int max)
+static void	ft_free_all(char **dst, int max)
 {
-	int			i;
+	int	i;
 
 	i = -1;
 	while (++i < max)
@@ -24,7 +24,7 @@ static void		ft_free_all(char **dst, int max)
 
 static size_t	ft_wordlen(char *s, char c)
 {
-	size_t		size;
+	size_t	size;
 
 	size = 0;
 	while (s[size] && s[size] != c)
@@ -34,8 +34,8 @@ static size_t	ft_wordlen(char *s, char c)
 
 static size_t	ft_word_count(char *s, char c)
 {
-	size_t		count;
-	size_t		i;
+	size_t	count;
+	size_t	i;
 
 	count = 0;
 	while (*s)
@@ -50,25 +50,27 @@ static size_t	ft_word_count(char *s, char c)
 	return (count);
 }
 
-char			**ft_split(const char *s, char c)
+char	**ft_split(const char *s, char c)
 {
-	char		**dst;
-	size_t		i;
-	size_t		size;
-	char		*s2;
+	char	**dst;
+	size_t	i;
+	size_t	size;
+	char	*s2;
 
 	if (!s)
 		return (0);
 	s2 = (char *)s;
 	size = ft_word_count(s2, c);
-	if (!(dst = (char **)malloc(sizeof(char *) * (size + 1))))
+	dst = (char **)malloc(sizeof(char *) * (size + 1));
+	if (!dst)
 		return (0);
 	i = -1;
 	while (++i < size)
 	{
 		while (*s2 && *s2 == c)
 			s2++;
-		if (!(dst[i] = ft_substr((const char *)s2, 0, ft_wordlen(s2, c))))
+		dst[i] = ft_substr((const char *)s2, 0, ft_wordlen(s2, c));
+		if (!dst)
 		{
 			ft_free_all(dst, i);
 			return (0);

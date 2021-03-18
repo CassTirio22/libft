@@ -6,7 +6,7 @@
 /*   By: ctirions <ctirions@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 16:27:08 by ctirions          #+#    #+#             */
-/*   Updated: 2021/03/18 14:55:27 by ctirions         ###   ########.fr       */
+/*   Updated: 2021/03/18 22:01:14 by ctirions         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int nb;
+	unsigned int	nb;
 
 	if (fd < 0)
 		return ;

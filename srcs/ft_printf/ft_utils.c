@@ -6,13 +6,13 @@
 /*   By: ctirions <ctirions@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/16 13:22:17 by ctirions          #+#    #+#             */
-/*   Updated: 2021/03/18 15:10:31 by ctirions         ###   ########.fr       */
+/*   Updated: 2021/03/18 21:59:48 by ctirions         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft_printf.h"
 
-int		ft_len_hex_nbr(unsigned long n)
+int	ft_len_hex_nbr(unsigned long n)
 {
 	if (n < 16)
 		return (1);
@@ -26,7 +26,7 @@ void	ft_put_unsigned_int(unsigned int n)
 	ft_putchar_fd(n % 10 + '0', 1);
 }
 
-int		ft_atoi2(const char **str)
+int	ft_atoi2(const char **str)
 {
 	int					i;
 	int					neg;
@@ -46,14 +46,14 @@ int		ft_atoi2(const char **str)
 		res_2 = res;
 		res = res * 10 + *(*str)++ - '0';
 		if (res > LLONG_MAX || res < res_2)
-			return (neg == 1 ? -1 : 0);
+			return (ft_ternint(neg == 1, -1, 0));
 	}
 	return ((int)(neg * res));
 }
 
-int		ft_count(unsigned int n)
+int	ft_count(unsigned int n)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	while (n > 9)

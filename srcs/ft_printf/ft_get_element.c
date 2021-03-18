@@ -6,7 +6,7 @@
 /*   By: ctirions <ctirions@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 18:26:46 by ctirions          #+#    #+#             */
-/*   Updated: 2021/03/18 15:10:24 by ctirions         ###   ########.fr       */
+/*   Updated: 2021/03/18 21:56:23 by ctirions         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,13 @@ char	ft_get_first_flag(const char **string)
 		{
 			(*string)++;
 			if (i == 0 || i == 1)
+			{
 				while (**string == '-' || **string == '0')
 				{
-					i && **string == '-' ? i-- : i;
+					i = ft_ternint(i && **string == '-', i--, i);
 					(*string)++;
 				}
+			}
 			return (flags[i]);
 		}
 	}
@@ -40,7 +42,7 @@ char	ft_get_first_flag(const char **string)
 
 void	ft_get_first_precision(const char **string)
 {
-	if (!ft_strchr(".*sicxXupd%", (int)**string) &&\
+	if (!ft_strchr(".*sicxXupd%", (int)(**string)) && \
 		!ft_isdigit((int)**string) && **string != '-')
 	{
 		g_error = 1;
@@ -75,7 +77,7 @@ void	ft_get_second(const char **string)
 		g_prec2 = ft_atoi2(string);
 }
 
-int		ft_execute(const char **string, char *percent_str, int i, char *hex)
+int	ft_execute(const char **string, char *percent_str, int i, char *hex)
 {
 	while (percent_str[++i])
 	{
@@ -90,7 +92,7 @@ int		ft_execute(const char **string, char *percent_str, int i, char *hex)
 			else if (i == 3)
 				return (ft_get_x(va_arg(g_arg, unsigned int), hex));
 			else if (i == 4)
-				return (ft_get_x(va_arg(g_arg, unsigned int),\
+				return (ft_get_x(va_arg(g_arg, unsigned int), \
 					"0123456789ABCDEF"));
 			else if (i == 5)
 				return (ft_get_u(va_arg(g_arg, int)));

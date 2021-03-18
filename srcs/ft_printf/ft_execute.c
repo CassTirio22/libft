@@ -6,7 +6,7 @@
 /*   By: ctirions <ctirions@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 13:19:41 by ctirions          #+#    #+#             */
-/*   Updated: 2021/03/18 15:10:20 by ctirions         ###   ########.fr       */
+/*   Updated: 2021/03/18 21:42:54 by ctirions         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static void	ft_ajust_elem(void)
 	}
 }
 
-int			ft_get_element(const char **string)
+int	ft_get_element(const char **string)
 {
 	(*string)++;
 	ft_set_element();
