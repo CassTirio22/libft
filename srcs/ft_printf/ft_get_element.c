@@ -5,12 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ctirions <ctirions@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/21 18:26:46 by ctirions          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2021/03/22 15:15:27 by ctirions         ###   ########.fr       */
-=======
-/*   Updated: 2021/03/18 21:56:23 by ctirions         ###   ########.fr       */
->>>>>>> 814447e3911564bdec2e35d0b399ef9e244ef7fd
+/*   Created: 2021/03/22 15:37:40 by ctirions          #+#    #+#             */
+/*   Updated: 2021/03/22 15:38:42 by ctirions         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +42,7 @@ char	ft_get_first_flag(const char **string)
 
 void	ft_get_first_precision(const char **string)
 {
-<<<<<<< HEAD
 	if (!ft_strchr(".*sicxXupd%", (int)**string) && \
-=======
-	if (!ft_strchr(".*sicxXupd%", (int)(**string)) && \
->>>>>>> 814447e3911564bdec2e35d0b399ef9e244ef7fd
 		!ft_isdigit((int)**string) && **string != '-')
 	{
 		g_error = 1;

@@ -6,11 +6,7 @@
 /*   By: ctirions <ctirions@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 15:04:19 by ctirions          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2021/03/22 15:27:41 by ctirions         ###   ########.fr       */
-=======
-/*   Updated: 2021/03/18 22:05:24 by ctirions         ###   ########.fr       */
->>>>>>> 814447e3911564bdec2e35d0b399ef9e244ef7fd
+/*   Updated: 2021/03/22 15:35:24 by ctirions         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +50,6 @@ static size_t	ft_word_count(char *s, char c)
 	return (count);
 }
 
-<<<<<<< HEAD
 char	*ft_set_params(size_t *size, char **dst, char *s, char c)
 {
 	size = ft_word_count(s, c);
@@ -62,8 +57,6 @@ char	*ft_set_params(size_t *size, char **dst, char *s, char c)
 	return (s);
 }
 
-=======
->>>>>>> 814447e3911564bdec2e35d0b399ef9e244ef7fd
 char	**ft_split(const char *s, char c)
 {
 	char	**dst;
@@ -73,13 +66,7 @@ char	**ft_split(const char *s, char c)
 
 	if (!s)
 		return (0);
-<<<<<<< HEAD
 	s2 = ft_set_params(&size, dst, s, c);
-=======
-	s2 = (char *)s;
-	size = ft_word_count(s2, c);
-	dst = (char **)malloc(sizeof(char *) * (size + 1));
->>>>>>> 814447e3911564bdec2e35d0b399ef9e244ef7fd
 	if (!dst)
 		return (0);
 	i = -1;
@@ -88,11 +75,7 @@ char	**ft_split(const char *s, char c)
 		while (*s2 && *s2 == c)
 			s2++;
 		dst[i] = ft_substr((const char *)s2, 0, ft_wordlen(s2, c));
-<<<<<<< HEAD
 		if (!dst[i])
-=======
-		if (!dst)
->>>>>>> 814447e3911564bdec2e35d0b399ef9e244ef7fd
 		{
 			ft_free_all(dst, i);
 			return (0);
