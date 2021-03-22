@@ -6,7 +6,7 @@
 /*   By: ctirions <ctirions@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 11:49:18 by ctirions          #+#    #+#             */
-/*   Updated: 2021/03/18 14:56:38 by ctirions         ###   ########.fr       */
+/*   Updated: 2021/03/22 15:31:42 by ctirions         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,13 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	i = -1;
 	if (ft_strlen(s) < start)
 	{
-		if (!(pt = (char *)ft_calloc(sizeof(char), 1)))
+		pt = (char *)ft_calloc(sizeof(char), 1);
+		if (!pt)
 			return (0);
 		return (pt);
 	}
-	if (!(pt = (char *)ft_calloc(sizeof(char), len + 1)))
+	pt = (char *)ft_calloc(sizeof(char), len + 1);
+	if (!pt)
 		return (0);
 	while (++i < len)
 		pt[i] = s[start + i];

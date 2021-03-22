@@ -6,7 +6,7 @@
 /*   By: ctirions <ctirions@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 17:11:03 by ctirions          #+#    #+#             */
-/*   Updated: 2021/03/18 14:55:46 by ctirions         ###   ########.fr       */
+/*   Updated: 2021/03/22 15:28:25 by ctirions         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int i;
+	int	i;
 
 	if (c == 0)
 		return ((char *)s + ft_strlen((char *)s));

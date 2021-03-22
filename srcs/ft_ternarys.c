@@ -6,7 +6,7 @@
 /*   By: ctirions <ctirions@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/18 17:33:35 by ctirions          #+#    #+#             */
-/*   Updated: 2021/03/18 17:34:15 by ctirions         ###   ########.fr       */
+/*   Updated: 2021/03/22 15:32:10 by ctirions         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_ternint(int boolean, int a, int b)
 	return (b);
 }
 
-char ft_ternchar(int boolean, char a, char b)
+char	ft_ternchar(int boolean, char a, char b)
 {
 	if (boolean)
 		return (a);

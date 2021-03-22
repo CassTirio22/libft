@@ -6,7 +6,7 @@
 /*   By: ctirions <ctirions@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/17 20:22:12 by ctirions          #+#    #+#             */
-/*   Updated: 2021/03/18 15:10:28 by ctirions         ###   ########.fr       */
+/*   Updated: 2021/03/22 15:15:43 by ctirions         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_set_element(void)
 	g_error = 0;
 }
 
-int		ft_printf(const char *string, ...)
+int	ft_printf(const char *string, ...)
 {
 	int	result;
 
