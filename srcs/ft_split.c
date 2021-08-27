@@ -50,14 +50,14 @@ static size_t	ft_word_count(char *s, char c)
 	return (count);
 }
 
-char	*ft_set_params(size_t *size, char **dst, char *s, char c)
+char	*ft_set_params(size_t *size, char ***dst, char *s, char c)
 {
-	size = ft_word_count(s, c);
-	dst = (char **)malloc(sizeof(char *) * (size + 1));
+	*size = ft_word_count(s, c);
+	*dst = (char **)malloc(sizeof(char *) * (*size + 1));
 	return (s);
 }
 
-char	**ft_split(const char *s, char c)
+char	**ft_split(char *s, char c)
 {
 	char	**dst;
 	size_t	i;
@@ -66,7 +66,7 @@ char	**ft_split(const char *s, char c)
 
 	if (!s)
 		return (0);
-	s2 = ft_set_params(&size, dst, s, c);
+	s2 = ft_set_params(&size, &dst, s, c);
 	if (!dst)
 		return (0);
 	i = -1;

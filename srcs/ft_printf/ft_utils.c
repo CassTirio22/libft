@@ -28,13 +28,11 @@ void	ft_put_unsigned_int(unsigned int n)
 
 int	ft_atoi2(const char **str)
 {
-	int					i;
 	int					neg;
 	unsigned long long	res;
 	unsigned long long	res_2;
 
 	neg = 1;
-	i = 0;
 	res = 0;
 	while ((**str >= 9 && **str <= 13) || **str == ' ')
 		(*str)++;

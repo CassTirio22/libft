@@ -30,7 +30,7 @@ char	ft_get_first_flag(const char **string)
 			{
 				while (**string == '-' || **string == '0')
 				{
-					i = ft_ternint(i && **string == '-', i--, i);
+					i = ft_ternint(i && **string == '-', i - 1, i);
 					(*string)++;
 				}
 			}

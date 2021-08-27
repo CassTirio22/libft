@@ -48,7 +48,7 @@ static int	ft_weird_p(unsigned long addr, int power, char *hex, char *res)
 	if (g_flag == '-')
 		while (i++ < g_prec1 - size - 2)
 			write(1, " ", 1);
-	i = ft_ternint(i, --i, i);
+	i = ft_ternint(i, i - 1, i);
 	return (size + 2 + i);
 }
 
@@ -87,6 +87,6 @@ int	ft_get_p(void *pt, char *hex, int i)
 	if (g_flag == '-')
 		while (i++ < g_prec1 - size - 2)
 			write(1, " ", 1);
-	i = ft_ternint(i, --i, i);
+	i = ft_ternint(i, i - 1, i);
 	return (size + 2 + i);
 }

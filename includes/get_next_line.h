@@ -27,7 +27,7 @@ char	*ft_check_error(int fd, char **line);
 int		get_next_line(int fd, char **line);
 char	*ft_linecpy(char *save);
 char	*ft_savecpy(char *save);
-int		ft_end(int reader, char **line, char *save[OPEN_MAX], int fd);
+int		ft_end(int reader, char **line, char *save[FOPEN_MAX], int fd);
 
 /*
 **		UTILS FONCLTIONS

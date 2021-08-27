@@ -36,7 +36,7 @@ static int	ft_flag_zero_all(int size, int l, int weird)
 static void	ft_weird_x2(int l, int *size, char *res)
 {
 	if (l)
-		*size--;
+		(*size)--;
 	else
 		ft_putstr_fd(res, 1);
 	free(res);

@@ -47,7 +47,7 @@ static int	ft_weird_s(char *str, char *str2)
 	if (g_flag == '-')
 		while (j++ < g_prec1 - size)
 			write(1, " ", 1);
-	j = ft_ternint(j, --j, j);
+	j = ft_ternint(j, j - 1, j);
 	return (size + j);
 }
 
@@ -67,6 +67,6 @@ int	ft_get_s(char *str)
 	if (g_flag == '-')
 		while (i++ < g_prec1 - size)
 			write(1, " ", 1);
-	i = ft_ternint(i, --i, i);
+	i = ft_ternint(i, i - 1, i);
 	return (ft_ternint(!str, 6 + i, ft_strlen(str) + i));
 }

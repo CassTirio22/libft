@@ -12,7 +12,7 @@
 
 #include "get_next_line.h"
 
-int	ft_end(int reader, char **line, char *save[OPEN_MAX], int fd)
+int	ft_end(int reader, char **line, char *save[FOPEN_MAX], int fd)
 {
 	*line = ft_linecpy(save[fd]);
 	if (!(*line))
@@ -32,7 +32,7 @@ char	*ft_check_error(int fd, char **line)
 {
 	char	*buffer;
 
-	if (fd < 0 || !line || BUFFER_SIZE <= 0 || fd > OPEN_MAX)
+	if (fd < 0 || !line || BUFFER_SIZE <= 0 || fd > FOPEN_MAX)
 		return (NULL);
 	buffer = (char *)malloc(sizeof(char) * BUFFER_SIZE + 1);
 	if (!buffer)
@@ -87,7 +87,7 @@ int	get_next_line(int fd, char **line)
 {
 	char			*buffer;
 	long long int	reader;
-	static char		*save[OPEN_MAX];
+	static char		*save[FOPEN_MAX];
 
 	reader = 1;
 	buffer = ft_check_error(fd, line);
